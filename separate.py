@@ -101,8 +101,10 @@ class  _audio_pre_():
 if __name__ == '__main__':
     device = 'cuda'
     is_half=True
-    model_path='uvr5_weights/2_HP-UVR.pth'
+    model_path='./uvr-mdx-infer/models/2_HP-UVR.pth'
     pre_fun = _audio_pre_(model_path=model_path,device=device,is_half=True)
-    audio_path = 'audio.aac'
+    audio_path = '../input/Extreme.Job.2019.KOREAN.1080p.BluRay.x265-VXT.wav'
+    ins_path = None
+    vocal_path = './output/'
     save_path = 'opt'
-    pre_fun._path_audio_(audio_path , save_path,save_path)
+    pre_fun._path_audio_(audio_path , ins_path, vocal_path)
