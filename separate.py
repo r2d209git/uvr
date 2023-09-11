@@ -101,10 +101,9 @@ class  _audio_pre_():
 if __name__ == '__main__':
     device = 'cuda'
     is_half=True
-    model_path='./uvr-mdx-infer/models/2_HP-UVR.pth'
+    model_path='../denoise_models/2_HP-UVR.pth'
     pre_fun = _audio_pre_(model_path=model_path,device=device,is_half=True)
-    audio_path = '../input/Extreme.Job.2019.KOREAN.1080p.BluRay.x265-VXT.wav'
+    audio_path = '../denoise_in/Extreme.Job.2019.KOREAN.1080p.BluRay.x265-VXT.wav'
     ins_path = None
-    vocal_path = './output/'
-    save_path = 'opt'
+    vocal_path = '../denoise_out/'
     pre_fun._path_audio_(audio_path , ins_path, vocal_path)
